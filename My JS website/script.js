@@ -33,7 +33,7 @@ const eventListener = document.querySelector(".eventListener")
 eventListener.addEventListener("click", e=> {
 	
 // Random fortune teller: userInput
-	prompt("State your query");
+	var ask = prompt("State your query");
 
 // Random fortune teller: Functions
 	var randomNumber = Math.floor(Math.random() * 6);
@@ -61,9 +61,13 @@ eventListener.addEventListener("click", e=> {
 		break;
 		case 6:
 			fortuneTeller = ("Definitely");
-		
+		break;
 	}
-
+	if (ask === "") {
+		fortuneTeller = ("what");
+	} else if(ask === null) {
+		return;
+	}
 	alert(fortuneTeller);
 })
 
@@ -88,7 +92,8 @@ eventListener.addEventListener("click", e=> {
 	 for (let i = 0; i < elements.length; i++) {
 		 elements[i].addEventListener("click", function() {
 			 elements[i].style.backgroundColor = "#a79cb5";
-			 elements[i].style.color = "#e4d8e8";
+			 elements[i].style.color = "white";
+			 elements[0].innerHTML = "Yeah nothing exciting happened lol";
 	 }) 
  }
 
