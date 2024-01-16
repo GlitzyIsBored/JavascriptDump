@@ -16,47 +16,56 @@
 	
 <!-- Form -->		
 	<form>	
-	<input type="text" id="name"/><br>
+	<input type="text" placeholder="InsertName" id="name"/><br>
 	<input type="button" value="Submit" onclick="write_name();"/>
 	</form>
 	
 <!-- Background changer -->		
 	<br><hr>
 	<div class="segmentTwo">
-	<h4>Click me</h4>
+	<h4>CLICK ANYWHERE TO MAKE ME MORE PRETTIER</h4>
 	</div>
 	<br><hr>
 	
-	<h1 class = "eventListener"> Cllick me</h1>
+	<h1 class = "eventListener">Activate fortune teller</h1>
 	<hr>
 	<h2 class="headerOne"> Click me for some cool stuff </h2>
 	<h3 class="headerTwo"> Click me too! </h3>
-
-	<!-- Javascript within HTML -->
-	
-	<script>
-	/* function elementFromHtml(div) {
-	const template = document.createElement("h1");
-	
-	template.innerHTML = div.trim();
-	
-	return template.content.firstElementChild
-	}
-	*/
-	
-	<script type="text/javascript>
-		let newElement = document.createElement('input');
-		
-		document.body.appendChild(newElement);
-	</script>
-
+	<hr>
+<!-- appendChild stuff -->
+	<ul id="birds">
+		<li>Bird</li>
+		</ul>
+	<hr>
+	<div id = "boxBorder">
+		<div onkeydown="getKeyAndMove(event)" id="box" >
+		<img src="https://art.pixilart.com/4c73a17d2f8ae88.png" width="50px">
+			</div>
+	</div>
+	<hr>
+	<h1> pigeon </h1>
+	<div id="repeat"><p>testing</p></div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	
+
 	
 </div>
 </body>
 
 <style>
+
+
+#boxBorder {
+	border: 2px solid black;
+	height: 54px;
+	margin: 0 11.8%;}
+
+#box {
+	border: 2px solid black;
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	margin: 0px 31%;
+	}
 
 .segment {
 	background-color: white;
@@ -65,10 +74,10 @@
 	margin-top: 0%;
 	}
 	
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
 	.segment {
-	margin-right: 15%;
-	margin-left: 15%;
+	margin-right: 17%;
+	margin-left: 17%;
 	zoom: 110%;
 	}
 }
@@ -79,6 +88,7 @@
 	border: solid black 1px;
 	border-width: 3px;
 	margin: 1rem 10rem;
+	<!-- transform: rotate(20deg); -->
 	}
 
 body {
