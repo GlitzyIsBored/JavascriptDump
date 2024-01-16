@@ -16,16 +16,14 @@ function write_name() {
 	alert("hi " + name.value);
 	}
 
-
 // Change background
 
-        document.querySelector("h1"); {
-            onclick = function() { 
-                document.querySelector(".segmentTwo").style.background = "#a79cb5" ;
-                document.querySelector("h4").style.color = "white";
-            }
-        }
-
+document.querySelector("h1"); {
+	onclick = function() { 
+		document.querySelector(".segmentTwo").style.background = "#a79cb5" ;
+        document.querySelector("h4").style.color = "white";
+	}
+}
 
 // addEventListener
 const eventListener = document.querySelector(".eventListener")
@@ -63,10 +61,10 @@ eventListener.addEventListener("click", e=> {
 			fortuneTeller = ("Definitely");
 		break;
 	}
-	if (ask === "") {
+		if (ask === "") {
 		fortuneTeller = ("what");
 	} else if(ask === null) {
-		return;
+	return;
 	}
 	alert(fortuneTeller);
 })
@@ -97,4 +95,47 @@ eventListener.addEventListener("click", e=> {
 	 }) 
  }
 
+ //AppendChild stuff
  
+ const birds = document.getElementById("birds");
+ 
+ let plusBirb = document.createElement("li");
+ plusBirb.textContent = "Pigeon";
+ 
+birds.appendChild(plusBirb);
+
+//Box-movement controls
+
+var move=77;
+var sprite = document.getElementById("box");
+var spriteLeft = 0;
+
+window.onload=()=>{
+	sprite.style.position="absolute";
+	sprite.style.left = 0;
+	sprite.style.backgroundColor="black";
+}
+window.onkeydown = (e) => {
+	switch (e.key) {
+		case 'ArrowLeft':
+		sprite.style.left = parseInt(sprite.style.left) - move + "px";
+		sprite.style.transform = "scaleX(-1)";
+		break;
+		case 'ArrowRight':
+		sprite.style.left = parseInt(sprite.style.left) + move + "px";
+		sprite.style.transform = "scaleX(1)";
+		break;
+		case sprite.style.left >=100:
+		sprite.style.left = parseInt(sprite.style.left) + move - "px";
+
+	}
+
+}
+
+console.log("idek");
+
+//image repeat test
+var pigeon = document.getElementById("repeat") ;
+for (i=0; i < pigeon.length; i++) {
+	console.log(pigeon[i]);
+}
